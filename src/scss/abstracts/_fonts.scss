@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'GeneralSans';
+    src: url('/src/fonts/GeneralSans-Variable.woff2') format('woff2');
+    font-display: swap;
+    font-style: normal;
+}
+
+$font-family: 'GeneralSans', sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-weight-semibold: 500;
+
+$font-heading: 36px;
+$font-subheading: 24px;
+$font-paragraph: 18px;
+$font-subtitle: 14px;
