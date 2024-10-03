@@ -53,6 +53,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-clip: border-box;
+  max-height: 100vh;
 }
 
 aside {
@@ -88,6 +89,8 @@ aside {
 main {
   position: relative;
   overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 100vh;
   height: 100%;
   width: 85%;
   display: flex;

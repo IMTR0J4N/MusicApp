@@ -2,9 +2,10 @@
 
 main {
     & > header {
-        position: absolute;
+        position: fixed;
         top: 0;
-        width: 100%;
+        right: 0;
+        width: 85%;
         height: 10%;
         padding: 40px 175px;
 

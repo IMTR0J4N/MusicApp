@@ -69,6 +69,10 @@ export default class MusicCardComponent extends HTMLElement {
         this.shadowRoot.appendChild(div);
         this.shadowRoot.appendChild(title);
 
+        button.addEventListener('click', () => {
+            this.setAttribute('liked', this.getAttribute('liked') === 'true' ? 'false' : 'true')
+        });
+
         this.build();
     }
 
