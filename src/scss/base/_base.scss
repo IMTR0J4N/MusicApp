@@ -22,12 +22,18 @@ i {
 * {
   font-family: $font-family;
   font-size: $font-paragraph;
-  font-weight: $font-weight-regular;
+  font-weight: $font-weight-semibold;
 }
 
 h1 {
   font-family: $font-family;
   font-size: $font-heading;
+  font-weight: $font-weight-semibold;
+}
+
+h2 {
+  font-family: $font-family;
+  font-size: $font-subheading;
   font-weight: $font-weight-semibold;
 }
 
@@ -41,6 +47,7 @@ a {
 }
 
 body {
+  display: flex;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -48,17 +55,105 @@ body {
   background-clip: border-box;
 }
 
+aside {
+  height: 100%;
+  width: 15%;
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 30px;
+
+    img {
+      width: 52px;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-size: $font-paragraph;
+    }
+  }
+
+  nav {
+    padding: 30px;
+
+    span {
+      text-transform: uppercase;
+      color: $color-gray;
+    }
+  }
+}
+
 main {
+  position: relative;
   overflow-x: hidden;
   height: 100%;
-  width: 100%;
+  width: 85%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: $color-lightgray;
 }
 
 strong {
   font-weight: bold;
+}
+
+.card--wrapper {
+
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  .card-grid {
+    display: grid;
+    width: fit-content;
+    grid-template-rows: repeat(2, 300px);
+    /* 2 lignes de 300px */
+    grid-template-areas:
+      "card1 card2 bigcard"
+      "card3 card4 bigcard";
+    gap: 20px;
+    row-gap: 100px;
+    /* Espace entre les éléments */
+    padding-top: 100px;
+
+    .card1 {
+      grid-area: card1;
+    }
+
+    .card2 {
+      grid-area: card2;
+    }
+
+    .card3 {
+      grid-area: card3;
+    }
+
+    .card4 {
+      grid-area: card4;
+    }
+
+    .card5 {
+      grid-area: card5;
+    }
+
+    .bigcard {
+      grid-area: bigcard;
+    }
+
+    music-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: fit-content;
+      height: fit-content;
+    }
+
+  }
 }
 
 // ::-webkit-scrollbar {

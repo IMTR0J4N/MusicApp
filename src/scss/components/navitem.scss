@@ -1,0 +1,24 @@
+@use '../base' as *;
+@use '../abstracts' as *;
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: fit-content;
+    width: fit-content;
+
+    img {
+        display: block;
+        width: 24px;
+        height: 24px;
+        color: black;
+    }
+
+    &.active {
+        a {
+            color: $color-orange;
+        }
+    }
+
+}

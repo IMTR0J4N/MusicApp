@@ -1,0 +1,107 @@
+@use "../abstracts" as *;
+
+main {
+    & > header {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 10%;
+        padding: 40px 175px;
+
+        & > div {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            width: 100%;
+
+            .searchbar--wrapper {
+                position: relative;
+                display: flex;
+                align-items: center;
+                height: 35px;
+                width: 85%;
+
+                img {
+                    position: absolute;
+                    left: 15px;
+                    height: 24px;
+                    width: 24px;
+                    filter: opacity(0.4);
+                }
+
+                input {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 20px;
+                    border: none;
+                    padding-left: 50px;
+                    padding-right: 20px;
+
+                    &::placeholder {
+                        color: $color-gray;
+                    }
+
+                    &::-webkit-search-cancel-button {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            & > img {
+                width: 42px;
+                border-radius: 50%;
+                transform: translateX(-80%);
+            }
+
+            & > span {
+                color: $color-gray;
+            }
+        }
+    }
+
+    & > section {
+        position: absolute;
+        align-self: center;
+        bottom: 0;
+        height: 90%;
+        width: 100%;
+        padding-left: 175px;
+        padding-right: 230px;
+
+        & > header {
+            display: flex;
+            justify-content: space-between;
+
+            & > div {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                & > ul {
+                    display: flex;
+                    gap: 20px;
+                } 
+            }
+
+            & > button {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 0px 15px;
+                border-radius: 20px;
+                background-color: $color-orange;
+                cursor: pointer;
+
+                & > img {
+                    filter: brightness(0) invert(1);
+                }
+
+                & > span {
+                    color: white;
+                }
+            }
+        }
+    }
+}

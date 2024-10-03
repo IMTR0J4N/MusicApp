@@ -9,7 +9,57 @@
   <title>Music App</title>
 </head>
 <body>
-  <title-component></title-component>
+  <aside>
+    <header>
+      <img src="/assets/img/logo.webp" alt="Website app Logo">
+      <h1>Music App</h1>
+    </header>
+    <nav>
+      <span>menu</span>
+      <ul>
+        <nav-item active="true" icon="/assets/img/icons/house.svg" text="Home"></nav-item>
+        <nav-item icon="/assets/img/icons/squares.svg" text="Categories"></nav-item>
+        <nav-item icon="/assets/img/icons/heart.svg" text="Favoris"></nav-item>
+        <nav-item icon="/assets/img/icons/microphone.svg" text="Enregistrer en récit"></nav-item>
+      </ul>
+    </nav>
+  </aside>
+  <main>
+    <header>
+        <div>
+          <div class="searchbar--wrapper">
+            <img src="/assets/img/icons/magnifying-glass.svg" alt="Icon de loupe">
+            <input type="search" placeholder="Search">
+          </div>
+          <span>Username</span>
+          <img src="/assets/img/image.svg" alt="Image générique">
+        </div>
+    </header>
+    <section>
+      <header>
+        <div>
+          <h2>Suggestion</h2>
+          <ul>
+            <nav-item text="nouveau"></nav-item>
+            <nav-item text="populaire"></nav-item>
+          </ul>
+        </div>
+        <button>
+          <img src="/assets/img/icons/microphone-fill.svg" alt="Icon de microphone">
+          <span>Enregistrer un récit</span>
+        </button>
+      </header>
+      <div class="card--wrapper">
+        <div class="card-grid">
+          <music-card class="card1" liked="true" format="md" title="test" tag="test"></music-card>
+          <music-card class="card2" liked="true" format="md" title="test" tag="test"></music-card>
+          <music-card class="card3" liked="true" format="md" title="test" tag="test"></music-card>
+          <music-card class="card4" liked="true" format="md" title="test" tag="test"></music-card>
+          <music-card class="bigcard" liked="true" format="lg" title="test" tag="test"></music-card>
+        </div>
+      </div>
+    </section>
+  </main>
   <script src="./src/js/main.js" type="module"></script>
 </body>
 </html>
